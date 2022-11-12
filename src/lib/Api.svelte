@@ -109,9 +109,10 @@ fetch(`https://www.reddit.com/subreddits.json`)
     }
 
     function sel(){
-        var x = document.getElementById("selecter").value;
-        getdata(x);
-        getmore(x);
+        var x = document.getElementById("selecter");
+        x.blur();
+        getdata(x.value);
+        getmore(x.value);
     }
     
 
@@ -222,6 +223,9 @@ document.addEventListener('touchend', e => {
           </slot>
       </button>
       
+      </div>
+      <div class="footer">
+        <p>Created by <a href="https://t2k-group.co.uk">T2K Group</a></p>
       </div>
 
 
